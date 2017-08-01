@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.yu.broadcastreceiver">
+
     <!-- 网络变化 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!-- 开机广播权限 -->
@@ -38,10 +39,14 @@
         <receiver
             android:name=".DIYOrderReceiver"
             android:permission="com.yu.broadcastreceiver.permission">
-            <intent-filter>
+            <intent-filter android:priority="1000">
                 <action android:name="com.yu.broadcastreceiver.diy_order_receiver" />
             </intent-filter>
         </receiver>
+        <receiver
+            android:name=".LocalReceiver"
+            android:enabled="true"
+            android:exported="false"></receiver>
     </application>
 
 </manifest>

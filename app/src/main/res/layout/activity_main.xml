@@ -25,5 +25,12 @@
         android:layout_below="@id/id_btn_normal_receiver"
         android:onClick="order_receiver"
         android:text="@string/order_receiver" />
+    <Button
+        android:id="@+id/id_btn_local_receiver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_btn_order_receiver"
+        android:onClick="local_receiver"
+        android:text="@string/local_receiver" />
 
 </RelativeLayout>

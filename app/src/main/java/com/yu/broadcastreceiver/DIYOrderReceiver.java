@@ -17,7 +17,7 @@ public class DIYOrderReceiver extends BroadcastReceiver {
         switch (action) {
             case "com.yu.broadcastreceiver.diy_order_receiver":
                 Toast.makeText(context, "com.yu.broadcastreceiver.diy_order_receiver", Toast.LENGTH_SHORT).show();
-
+                abortBroadcast(); // 终止该广播的继续传播
                 break;
         }
     }
