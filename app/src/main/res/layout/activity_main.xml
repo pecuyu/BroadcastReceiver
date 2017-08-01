@@ -33,4 +33,12 @@
         android:onClick="local_receiver"
         android:text="@string/local_receiver" />
 
+    <Button
+        android:id="@+id/id_btn_force_offline_receiver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_btn_order_receiver"
+        android:onClick="force_offline_receiver"
+        android:text="@string/force_offline_receiver" />
+
 </RelativeLayout>

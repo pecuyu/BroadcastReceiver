@@ -4,10 +4,13 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import com.yu.broadcastreceiver.receiver.LocalReceiver;
+import com.yu.broadcastreceiver.receiver.NetworkChangeReceiver;
+
+public class MainActivity extends BaseActivity {
     NetworkChangeReceiver mNetworkReceiver;
     LocalReceiver mLocalReceiver;
 
@@ -67,5 +70,13 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setAction("com.yu.broadcastreceiver.local_receiver");
         localBroadcastManager.sendBroadcast(intent);
+    }
+
+    public void force_offline_receiver(View view) {
+        Toast.makeText(getApplicationContext(), "FORCE_OFFLINE", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent();
+        intent.setAction("com.yu.broadcastreceiver.FORCE_OFFLINE");
+        localBroadcastManager.sendBroadcast(intent);
+
     }
 }
