@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BroadcastReceiver</string>
+    <string name="normal_receiver">无序广播</string>
+    <string name="order_receiver">有序广播</string>
+</resources>
