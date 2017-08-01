@@ -54,24 +54,40 @@ public class MainActivity extends BaseActivity {
 
     }
 
+    /**
+     * 有序广播
+     * @param view
+     */
     public void order_receiver(View view) {
         Intent i = new Intent();
         i.setAction("com.yu.broadcastreceiver.diy_order_receiver");
         sendOrderedBroadcast(i,null);
     }
 
+    /**
+     * 正常（无序）广播
+     * @param view
+     */
     public void normal_receiver(View view) {
         Intent i = new Intent();
         i.setAction("com.yu.broadcastreceiver.diy_normal_receiver");
         sendBroadcast(i);
     }
 
+    /**
+     * 本地广播
+     * @param view
+     */
     public void local_receiver(View view) {
         Intent intent = new Intent();
         intent.setAction("com.yu.broadcastreceiver.local_receiver");
         localBroadcastManager.sendBroadcast(intent);
     }
 
+    /**
+     * 强制下线广播
+     * @param view
+     */
     public void force_offline_receiver(View view) {
         Toast.makeText(getApplicationContext(), "FORCE_OFFLINE", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent();
